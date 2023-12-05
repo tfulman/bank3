@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BOP - Withdrawal</title>
+		<base href="/">
+		<link rel="stylesheet" href="/views/bank.css">
+	</head>
+	<body>
+		<div class="spacer"></div>
+		<div class="balanceWrapper">
+			<form action="/bankActionsWithdrawal" id="formBankActions4" method="POST">
+				<input type="hidden" id="txtAccountName" name="txtAccountName" value="{{ username }}">
+                                <input type="hidden" id="txtAccountNumber" name="txtAccountNumber" value="{{ account_number }}">
+				<div class="accountBalanceWrapper">
+					<span class="">Account Number {{ account_number }}</span>
+					<div>Amount <input class="textField" type="text" id="txtWithdrawalSum" name="txtWithdrawalSum" value=""></div>
+				</div>
+				<div class="centered">
+					<input id="withdrawalSubmit" type="submit" value="Submit">
+					<input id="cancelWithdrawal" type="button" value="Cancel">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

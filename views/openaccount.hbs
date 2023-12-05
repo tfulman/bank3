@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BOP - Open an Account</title>
+		<base href="/">
+		<link rel="stylesheet" href="/views/bank.css">
+	</head>
+	<body>
+		<div class="spacer"></div>
+		<div class="balanceWrapper">
+			<form action="/bankActionsOpenAccount" id="bankActions5" method="POST">
+				<input type="hidden" id="txtAccountName" name="txtAccountName" value="{{ username }}">
+				<div class="newAccountWrapper centered">
+                                        <div>
+                                                <label class="rightFloat1" for="radioChequing">Chequing</label>
+						<input type="radio" {{{ chequingDisabled}}} value="chequing" class="rightFloat1 marginDown" name="radioAccountType" id="radioChequing">
+                                        </div>
+                                        <div>
+                                                <label class="rightFloat1" for="radioSavings">Savings</label>
+                                                <input type="radio" {{{ savingsDisabled}}} value="savings" class="rightFloat1 marginDown" name="radioAccountType" id="radioSavings">
+                                        </div>
+				</div>
+				<div class="centered">
+					<input id="newAccountSubmit" type="submit" value="Submit">
+					<input id="cancelNewAccount" type="button" value="Cancel">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<base href="/">
+		<link rel="stylesheet" href="/views/bank.css">
+	</head>
+	<body>
+		<div class="spacer"></div>
+		<div id="loginWrapper">
+			<h1>Login </h1>
+			<form action="/login" id="formLogin" method="POST">
+				<div id="boxWrapper">
+					<input class="txtLogin" required value="" type="text" name="txtUserName" id="txtUserName" placeholder="Username">
+					<input class="txtLogin" required value="" type="password" name="txtPassword" id="txtPassword" placeholder="Password">
+					<input id="btnLogin" type="submit" value="Submit">
+					<span id="loginStatus">{{ status }}</span>
+				</div>
+			</form>
+		 </div>
+	</body>
+</html>

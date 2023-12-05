@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BOP - Account Balance</title>
+		<base href="/">
+		<link rel="stylesheet" href="/views/bank.css">
+	</head>
+	<body>
+		<div class="spacer"></div>
+		<div class="balanceWrapper">
+			<div id="accountBalanceWrapper">
+				<span class="">Account: {{ account_number }}</span>
+				<span class="">Account Type: {{ account_type }}</span>
+				<span class="">Account Balance: {{ account_balance }}</span>
+			</div>
+		</div>
+		<form action="/webbankRedirect" id="formBankActions2" method="POST">
+			<input type="hidden" id="txtAccountName" name="txtAccountName" value="{{ username }}">
+			<input type="submit" value="OK" id="btnGoBack">
+		</form>
+	</body>
+</html>
